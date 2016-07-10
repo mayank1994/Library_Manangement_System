@@ -3,105 +3,82 @@
 
 <head>
 
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
 	
 
-
-
 </head>
 <body>
-
-<script type="text/javascript">
-	
-	
-function Move(tr){
- while (tr.parentNode&&tr.nodeName.toUpperCase()!='TR'){
-  tr=tr.parentNode
- }
- var table1=document.getElementById('tst1');
- if (!this.rows){
-  var rows=table1.getElementsByTagName('TR');
-  this.rows=[];
-  for (var z0=0;z0<rows.length;z0++){
-   this.rows[z0]=rows[z0];
-  }
- }
- var table2=document.getElementById('tst2');
- if (tr.parentNode!=table2){
-  table2.appendChild(tr);
- }
- else {
-  table1.appendChild(tr);
-  for (var z0=0;z0<this.rows.length;z0++){
-   if (this.rows[z0].parentNode==table1){
-    table1.appendChild(this.rows[z0]);
-   }
-  }
- }
-}
-
-
-</script>
-
-
- <div class="row large-centered">
-        <h1>World of Warcraft characters. <small>Mine and my brothers, we share.</small></h1>
+ <div >
+        <h1 class="bg-info"><center>All Libray Books</center></h1>
     </div>
-    <div class="row large-centered">
-        <input type="text" id="search" placeholder="Type to search..." />
-        <table id="table" border="2px" >
-            <thead>
-                <tr>
-                    <th>Character name</th>
-                    <th>Class</th>
-                    <th>Realm</th>
-
-                </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td>Benjamin.</td>
-                <td>Rogue.</td>
-                <td>Uldum ES.</td>
-                 <td><input class="btn btn-info" type="button" name="" value="Issue/Return" onclick="Move(this);" /></td>
-            </tr>
-            <tr>
-                <td>Cachoito.</td>
-                <td>Hunter.</td>
-                <td>Agamaggan EN.</td>
-                 <td><input class="btn btn-info" type="button" name="" value="Issue/Return" onclick="Move(this);" /></td>
-            </tr>
-            <tr>
-                <td>Contemplario.</td>
-                <td>Paladin.</td>
-                <td>Uldum ES.</td>
-                 <td><input class="btn btn-info" type="button" name="" value="Issue/Return" onclick="Move(this);" /></td>
-            </tr>
-            <tr>
-                <td>Elthron.</td>
-                <td>Death Knight.</td>
-                <td>Agamaggan ES.</td>
-                 <td><input class="btn btn-info" type="button" name="" value="Issue/Return" onclick="Move(this);" /></td>
-            </tr>
-            <tr>
-                <td>Giloh.</td>
-                <td>Priest.</td>
-                <td>Agamaggan EN.</td>
-                 <td><input class="btn btn-info" type="button" name="" value="Issue/Return" onclick="Move(this);" /></td>
-            </tr>
-        
-            </tbody>
-        </table>
-    </div>
+    <div >
+        <input type="text" id="search" placeholder="Type to search..." /><br><br><br>
+      <table id="table" border="3" class="table">
+ <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Author</th>
+            <th>Publishing Year</th>
+                                        
+        </tr>
+    </thead>
 
 
+ <tbody id="tst1" >
+  <tr>
+    <td>1</td>
+    <td>Harry Potter and the Deathly Hallows</td>
+    <td>J.K Rowling</td>
+    <td>2007</td>
+ 
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>Emma</td>
+    <td>Jane Austin</td>
+    <td>1816</td>
+  
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>The Fault in our Stars</td>
+    <td>John Green</td>
+    <td>2012</td>
+  
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>The Christmas Carol</td>
+    <td>Charles Dickens</td>
+    <td>1843</td>
+  
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>The Great Gatsby</td>
+    <td>F Scott Fitzgerald</td>
+    <td>1925</td>
+ 
+  </tr>
 
-<br><br><br>
-<h2><center>Books Issued</center></h2>
-<table border="3" class="table">
- <tbody id="tst2" >
  </tbody>
 </table>
+    </div>
+
+
+
 
 
 <script type="text/javascript">
@@ -116,6 +93,9 @@ function Move(tr){
                $(this).show();                
         });
     }); 
+
+
+
 
 
 
