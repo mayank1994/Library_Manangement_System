@@ -22,11 +22,13 @@
 
 <br><br>
 
-<input type="text" id="search" placeholder="Type to search..." />
+<a href="file:///C:/Users/Mayank/Desktop/search.html"><button class="btn btn-danger">Search the library</button></a>
+
+<!--<input type="text" id="search" placeholder="Type to search..." />-->
 
 <h2><center>Books Available</center></h2>
 <div class="container">
-<table border="3" class="table">
+<table id="table" border="3" class="table">
  <thead>
         <tr>
             <th>ID</th>
@@ -124,7 +126,7 @@ function Move(tr){
     $("#search").keyup(function(){
         _this = this;
         // Show only matching TR, hide rest of them
-        $.each($("#table tbody tr"), function() {
+        $.each($("#tst1 tbody tr"), function() {
             if($(this).text().toLowerCase().indexOf($(_this).val().toLowerCase()) === -1)
                $(this).hide();
             else
