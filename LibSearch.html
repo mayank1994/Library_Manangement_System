@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<!-- Searching for books in library-->
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+	
+
+</head>
+<body style="background-image: url(img1.jpg); ">
+ <div >
+        <h1  class="bg-success" ><center>LIBRARY MANAGEMENT SYSTEM</center></h1>
+        <h2 class="bg-warning"><center>Search all library Books</center></h2>
+    </div><br>
+    <p><b><font color="white">Enter the details about the book you want to search:</font></b></p>
+
+    <div >
+        <input style="width:100%" type="text" id="search" placeholder="Type to search..." /><br> <span class="glyphicon glyphicon-search"></span><br><br><br>
+      <table id="table" border="3" class="table table-bordered table table-hover">
+ <thead>
+        <tr class="danger">
+            <th>ID</th>
+            <th>Name</th>
+            <th>Author</th>
+            <th>Publishing Year</th>
+                                        
+        </tr>
+    </thead>
+
+
+ <tbody id="tst1" >
+  <tr class="info">
+    <td>1</td>
+    <td><a href="hp.html"> Harry Potter and the Deathly Hallows</a></td>
+    <td>J.K Rowling</td>
+    <td>2007</td>
+ 
+  </tr>
+  <tr class="info">
+    <td>2</td>
+    <td><a href="emma.html">Emma</a></td>
+    <td>Jane Austen</td>
+    <td>1816</td>
+  
+  </tr>
+  <tr class="info">
+    <td>3</td>
+     <td><a href="tfios.html">The Fault in our Stars</a></td>
+    <td>John Green</td>
+    <td>2012</td>
+  
+  </tr>
+  <tr class="info">
+    <td>4</td>
+    <td><a href="cc.html">The Christmas Carol</a></td>
+    <td>Charles Dickens</td>
+    <td>1843</td>
+  
+  </tr>
+  <tr class="info">
+    <td>5</td>
+    <td><a href="gg.html">The Great Gatsby</a></td>
+    <td>F Scott Fitzgerald</td>
+    <td>1925</td>
+    </tr>
+
+    <tr class="info">
+    <td>6</td>
+    <td><a href="got.html">The Game of Thrones</a></td>
+    <td>George R.R. Martin</td>
+    <td>1996</td>
+   
+  </tr>
+ 
+  </tr>
+
+ </tbody>
+</table>
+    </div>
+
+
+
+<!-- Dynamic search for books in table-->
+
+<script type="text/javascript">
+   // Write on keyup event of keyword input element
+    $("#search").keyup(function(){
+        _this = this;
+        // Show only matching TR, hide rest of them
+        $.each($("#table tbody tr"), function() {
+            if($(this).text().toLowerCase().indexOf($(_this).val().toLowerCase()) === -1)
+               $(this).hide();
+            else
+               $(this).show();                
+        });
+    }); 
+</script>
+
+
+
+</body>
+</html>
